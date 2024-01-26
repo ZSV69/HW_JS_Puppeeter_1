@@ -53,7 +53,7 @@ describe("Github test page Packages", () => {
     expect(title2).toEqual('GitHub Packages: Your packages, at home with their code · GitHub');
   }, 20000)
 
-  test("The page Every GitHub plan", async () => {
+  test("Explore GitHub Actions", async () => {
     const btnSelector = ".link-mktg.f3-mktg";
     await page.waitForSelector(btnSelector, {
       visible: true,

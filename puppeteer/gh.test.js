@@ -36,16 +36,11 @@ describe("Github page tests", () => {
 
 
 describe("Github test page Packages", () => {
-  beforeEach(async () => {
-    page1 = await browser.newPage();
-    await page1.goto("https://github.com/features/packages");
-  })
-  
-  afterEach(() => {
-    page1.close();
-  })
+
 
   test("The h1 header content'", async () => {
+    page1 = await browser.newPage();
+    await page1.goto("https://github.com/features/packages");
     const firstLink = await page1.$("header div div a");
     await firstLink.click();
     await page1.waitForSelector('h1');
